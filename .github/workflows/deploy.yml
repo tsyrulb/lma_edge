@@ -50,7 +50,7 @@ jobs:
     - name: Upload artifact
       uses: actions/upload-pages-artifact@v3
       with:
-        path: frontend/dist/covenantops/browser
+        path: frontend/dist/lma_edge
 
   deploy:
     environment:

@@ -35,8 +35,8 @@
               "sourceMap": false,
               "namedChunks": false,
               "outputHashing": "all",
-              "baseHref": "/covenantops/",
-              "outputPath": "dist/covenantops"
+              "baseHref": "/lma_edge/",
+              "outputPath": "dist/lma_edge"
             },
             "development": {
               "optimization": false,
