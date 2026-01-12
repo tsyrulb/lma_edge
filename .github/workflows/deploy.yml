@@ -44,13 +44,37 @@ jobs:
         cd frontend
         npm run build:github-pages
         
+    - name: Prepare files for deployment
+      run: |
+        # Find where the files actually are
+        find frontend/dist -name "index.html" -type f
+        
+        # Copy files to a clean deployment directory
+        mkdir -p deploy
+        if [ -d "frontend/dist/lma_edge/browser" ]; then
+          cp -r frontend/dist/lma_edge/browser/* deploy/
+        elif [ -d "frontend/dist/lma_edge" ]; then
+          cp -r frontend/dist/lma_edge/* deploy/
+        else
+          echo "Could not find build output!"
+          ls -la frontend/dist/
+          exit 1
+        fi
+        
+        # Verify index.html exists
+        if [ ! -f "deploy/index.html" ]; then
+          echo "index.html not found in deploy directory!"
+          ls -la deploy/
+          exit 1
+        fi
+        
     - name: Setup Pages
       uses: actions/configure-pages@v4
       
     - name: Upload artifact
       uses: actions/upload-pages-artifact@v3
       with:
-        path: frontend/dist/lma_edge
+        path: deploy
 
   deploy:
     environment:
