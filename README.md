@@ -4,7 +4,7 @@ A polished web application that transforms loan agreements into an **Obligations
 
 ## 🚀 Live Demo
 
-**[Try the live demo →](https://yourusername.github.io/covenantops/)**
+**[Try the live demo →](https://tsyrulb.github.io/lma_edge/)**
 
 The demo runs entirely in your browser with realistic sample data - no backend required!
 
@@ -34,7 +34,7 @@ The demo runs entirely in your browser with realistic sample data - no backend r
 ## 🎯 Quick Start
 
 ### Option 1: Try the Live Demo
-Visit **[the live demo](https://yourusername.github.io/covenantops/)** - no installation required!
+Visit **[the live demo](https://tsyrulb.github.io/lma_edge/)** - no installation required!
 
 ### Option 2: Local Development
 
@@ -70,7 +70,7 @@ Frontend available at: `http://localhost:4200`
 ## 🎬 Demo Walkthrough
 
 ### With Live Demo (2 minutes)
-1. Visit the [live demo](https://yourusername.github.io/covenantops/)
+1. Visit the [live demo](https://tsyrulb.github.io/lma_edge/)
 2. Explore the **Dashboard** with pre-loaded sample data
 3. Click on an obligation to view details and upload evidence
 4. Try the **Import** page to create new loans
@@ -116,7 +116,7 @@ npm run build:github-pages      # GitHub Pages build
 ```bash
 cd frontend
 npm run build:github-pages
-# Deploy contents of dist/covenantops/browser/ to your hosting provider
+# Deploy contents of dist/lma_edge/browser/ to your hosting provider
 ```
 
 ## 🏗️ Architecture
@@ -141,7 +141,7 @@ npm run build:github-pages
 ## 📁 Project Structure
 
 ```
-covenantops/
+lma_edge/
 ├── frontend/                 # Angular application
 │   ├── src/app/
 │   │   ├── components/      # Reusable UI components
@@ -164,7 +164,7 @@ covenantops/
 ## 🔧 Configuration
 
 ### Environment Variables
-- `DATABASE_URL`: SQLite database path (default: `backend/covenantops.db`)
+- `DATABASE_URL`: SQLite database path (default: `backend/lma_edge.db`)
 - `STORAGE_DIR`: Evidence file storage directory (default: `backend/storage/`)
 
 ### Demo Mode
